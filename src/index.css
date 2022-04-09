@@ -13,8 +13,6 @@ h1 {
 }
 .form-container {
     background: url('../public/Imgs/valley.jpg') no-repeat 50% 40% / cover;
-    height: auto;
-    @apply w-2/4 p-5 rounded-3xl
 }
 
 .alert-notice::after {

@@ -47,10 +47,10 @@ function App() {
   }
 
   return (
-    <div className="bg-gray-800 flex items-center justify-center w-screen h-screen py-10">
-      <div className="flex w-3/4 min-h-full rounded-3xl shadow-lg m-auto bg-gray-100">
+    <div className="bg-gray-800 flex items-center justify-center w-screen h-auto md:h-screen lg:h-screen py-10">
+      <div className="flex flex-col lg:flex-row md:flex-row w-3/4 min-h-full rounded-3xl shadow-lg m-auto bg-gray-100">
           {/* form card section  */}
-        <div className="form-container">
+        <div className="form-container h-auto w-full bg:w-2/4 md:w-2/4 p-5 rounded-3xl">
           <div className="flex items-center justify-center">
             <img src="Imgs/logo.png" alt="franklin logo" className="my-auto h-10 mr-auto bg-gray-600 bg-opacity-30 rounded-lg" />
             <div className="flex p-2 text-gray-100 bg-gray-600 bg-opacity-30 rounded-lg">
@@ -61,7 +61,7 @@ function App() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center h-full">
-            <h1 className="text-white text-2xl">The Only Weather Forecast You Need</h1>
+            <h1 className="text-white text-2xl text-center py-10 md:py-0 lg:py-0">The Only Weather Forecast You Need</h1>
             <hr className="h-1 bg-white w-1/4 rounded-full my-5" />
             <form noValidate onSubmit={handleSubmit} className="flex justify-center w-full">
               <input type="text" 
@@ -80,7 +80,7 @@ function App() {
           </div>
         </div>
         {/* info card section  */}
-        <div className="w-2/4 p-3">
+        <div className="w-full lg:w-2/4 md:w-2/4 p-3">
           <Header />
           <div className="flex flex-col my-10">
             {/* card jsx  */}
