@@ -18,7 +18,11 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    getWeather(searchTerm)
+    if(searchTerm.length > 0) {
+      getWeather(searchTerm)
+    } else {
+      setWeatherData([])
+    }
   }
 
   const getWeather = async (location) => {
