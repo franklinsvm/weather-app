@@ -5,7 +5,8 @@ function DetailCard({weather_icon, data}) {
 
     return (
         <div className="relative container p-2 flex items-center justify-center shadow-lg rounded-lg bg-white h-1/3 mb-auto">
-            <video src={`Imgs/${weather[0].main}.mp4`} autoPlay loop muted className="absolute z-0 w-full h-full rounded-lg object-cover brightness-50" />
+            {/* <video src={`Imgs/${weather[0].main}.mp4`} autoPlay loop muted className="absolute z-0 w-full h-full rounded-lg object-cover brightness-50" /> */}
+            <img src={`Imgs/${weather[0].main}.jpg`} className="absolute z-0 w-full h-full rounded-lg object-cover brightness-50" />
             <div className="my-auto z-10">
             <p className="font-bold text-4xl text-pink-800 mb-2">{Math.round(main.temp)}&deg;C</p>
             <p className="text-3xl text-white tracking-widest">{weather[0].main}
