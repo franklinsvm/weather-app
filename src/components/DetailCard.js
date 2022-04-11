@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 function DetailCard({weather_icon, data}) {
-    const {clouds, main, weather} = data.list[0]
+    const {clouds, main, weather, city} = data.list[0]
 
     return (
         <div className="relative container p-2 flex items-center justify-center shadow-lg rounded-lg bg-white h-1/3 mb-auto">
@@ -13,7 +13,7 @@ function DetailCard({weather_icon, data}) {
                 <img src={weather_icon} className="w-1/4 inline" />
             </p>
             <p className="text-white text-xs uppercase tracking-widest">{weather[0].description}</p>
-            <p className="tracking-wider text-white">{moment().utcOffset({}).format("dddd MMM YYYY")}</p>
+            <p className="tracking-wider text-white">{moment().format("dddd MMM YYYY")}</p>
             </div>
             <div className="my-1 border-l-2 border-gray-100 p-1 z-10">
             <p className="text-white text-lg">RealFeel: {Math.round(main.feels_like)}&deg;C</p>

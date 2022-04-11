@@ -2,6 +2,8 @@ import { useState } from "react";
 import DetailCard from "./components/DetailCard";
 import Header from "./components/Header";
 import SummaryCard from "./components/SummaryCard";
+import moment from "moment";
+
 function App() {
   const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -22,6 +24,7 @@ function App() {
       getWeather(searchTerm)
     } else {
       setWeatherData([])
+      setCity('Unknown location')
     }
   }
 
